@@ -11,8 +11,12 @@ export class ProductService {
 
   constructor() { }
 
-  getProducts() {
-    return this.http.get<Product[]>('https://fakestoreapi.com/products');
+  getProducts(category?: string) {
+    const url = new URL('https://fakestoreapi.com/products')
+    if (category) {
+      url.searchParams.set('category', category)
+    }
+    return this.http.get<Product[]>(url.toString());
   }
 
   getOne(id: string) {

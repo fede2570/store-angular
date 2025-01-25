@@ -13,20 +13,24 @@
             <ul class="flex space-x-6">
                 <li>
                     <a 
-                        href="#"
-                        class="block underline hover:underline"
+                        routerLink="/"
+                        routerLinkActive="underline"
+                        [routerLinkActiveOptions]="{exact:true}"
+                        class="block hover:underline"
                         >Home</a>
                 </li>
                 <li>
                     <a 
-                        href="#"
+                        routerLink="/about"
                         class="block hover:underline"
+                        routerLinkActive="underline"
                         >Acerca</a>
                 </li>
                 <li>
                     <a 
-                        href="#"
+                        routerLink="/services"
                         class="block hover:underline"
+                        routerLinkActive="underline"
                         >Servicios</a>
                 </li>
             </ul>
